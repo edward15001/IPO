@@ -65,12 +65,39 @@ a {
 .grid {
     max-width: 50%;
     display: grid;
-    grid-template-rows:
-        repeat(auto-fit,
-            minmax(50px, 1fr));
     gap: 30px;
     max-width: 50%;
     margin-left: 25%;
+    grid-template:
+        "button1"
+        "button2"
+        "button3"
+        "button4"
+    ;
+
+    #alg {
+        grid-area: button1;
+    }
+
+    #calc {
+        grid-area: button2;
+    }
+
+    #est {
+        grid-area: button3;
+    }
+
+    #geo {
+        grid-area: button4;
+    }
+
+    @media (min-width: 768px) {
+        grid-template:
+            "button1 button2" 100px
+            "button3 button4" 100px
+        ;
+    }
+
 }
 
 .button {
