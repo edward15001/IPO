@@ -67,3 +67,9 @@ h1 {
 .btn:hover {
     opacity: 0.8;
 }
+
+.disabled {
+    background-color: gray !important;
+    pointer-events: none;
+    /* No permite hacer clic */
+}
