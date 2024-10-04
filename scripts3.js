@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Recuperar el progreso del usuario del localStorage
-    let estadisticaProgress = localStorage.getItem("algebraProgress");
+    let estadisticaProgress = localStorage.getItem("estadisticaProgress");
 
     // Si no hay progreso, inicializar en 0 (ningún ejercicio completado)
     if (!estadisticaProgress) {
         estadisticaProgress = 0;
-        localStorage.setItem("algebraProgress", estadisticaProgress);
+        localStorage.setItem("estadisticaProgress", estadisticaProgress);
     }
 
     // Bloquear los botones de los ejercicios si no se han completado los anteriores
@@ -55,14 +55,14 @@ document.addEventListener("DOMContentLoaded", function () {
     // Eventos de clic para actualizar el progreso
     ejercicio1Btn.addEventListener("click", function () {
         alert("Has completado el Ejercicio 1");
-        localStorage.setItem("algebraProgress", 1);
+        localStorage.setItem("estadisticaProgress", 1);
         location.reload(); // Recargar la página para actualizar el estado de los botones
     });
 
     ejercicio2Btn.addEventListener("click", function () {
         if (estadisticaProgress >= 1) {
             alert("Has completado el Ejercicio 2");
-            localStorage.setItem("algebraProgress", 2);
+            localStorage.setItem("estadisticaProgress", 2);
             location.reload();
         }
     });
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ejercicio3Btn.addEventListener("click", function () {
         if (estadisticaProgress >= 2) {
             alert("Has completado el Ejercicio 3");
-            localStorage.setItem("algebraProgress", 3);
+            localStorage.setItem("estadisticaProgress", 3);
             location.reload();
         }
     });
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ejercicio4Btn.addEventListener("click", function () {
         if (estadisticaProgress >= 3) {
             alert("Has completado el Ejercicio 4");
-            localStorage.setItem("algebraProgress", 4);
+            localStorage.setItem("estadisticaProgress", 4);
             location.reload();
         }
     });
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ejercicio5Btn.addEventListener("click", function () {
         if (estadisticaProgress >= 4) {
             alert("Has completado el Ejercicio 5");
-            localStorage.setItem("algebraProgress", 5);
+            localStorage.setItem("estadisticaProgress", 5);
             location.reload();
         }
     });
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ejercicio6Btn.addEventListener("click", function () {
         if (estadisticaProgress >= 5) {
             alert("Has completado el Ejercicio 6");
-            localStorage.setItem("algebraProgress", 6);
+            localStorage.setItem("estadisticaProgress", 6);
         }
     });
 });
