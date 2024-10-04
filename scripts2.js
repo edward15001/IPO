@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Recuperar el progreso del usuario del localStorage
-    let algebraProgress = localStorage.getItem("algebraProgress");
+    let calculoProgress = localStorage.getItem("algebraProgress");
 
     // Si no hay progreso, inicializar en 0 (ningún ejercicio completado)
-    if (!algebraProgress) {
-        algebraProgress = 0;
-        localStorage.setItem("algebraProgress", algebraProgress);
+    if (!calculoProgress) {
+        calculoProgress = 0;
+        localStorage.setItem("algebraProgress", calculoProgress);
     }
 
     // Bloquear los botones de los ejercicios si no se han completado los anteriores
@@ -16,28 +16,28 @@ document.addEventListener("DOMContentLoaded", function () {
     const ejercicio5Btn = document.getElementById("ejercicio5");
 
     // Actualizamos el estado de los botones basándonos en el progreso
-    if (algebraProgress >= 1) {
+    if (calculoProgress >= 1) {
         ejercicio2Btn.classList.remove("disabled");
     } else {
         ejercicio2Btn.classList.add("disabled");
         ejercicio2Btn.href = "#";
     }
 
-    if (algebraProgress >= 2) {
+    if (calculoProgress >= 2) {
         ejercicio3Btn.classList.remove("disabled");
     } else {
         ejercicio3Btn.classList.add("disabled");
         ejercicio3Btn.href = "#";
     }
 
-    if (algebraProgress >= 3) {
+    if (calculoProgress >= 3) {
         ejercicio4Btn.classList.remove("disabled");
     } else {
         ejercicio4Btn.classList.add("disabled");
         ejercicio4Btn.href = "#";
     }
 
-    if (algebraProgress >= 4) {
+    if (calculoProgress >= 4) {
         ejercicio5Btn.classList.remove("disabled");
     } else {
         ejercicio5Btn.classList.add("disabled");
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     ejercicio2Btn.addEventListener("click", function () {
-        if (algebraProgress >= 1) {
+        if (calculoProgress >= 1) {
             alert("Has completado el Ejercicio 2");
             localStorage.setItem("algebraProgress", 2);
             location.reload();
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     ejercicio3Btn.addEventListener("click", function () {
-        if (algebraProgress >= 2) {
+        if (calculoProgress >= 2) {
             alert("Has completado el Ejercicio 3");
             localStorage.setItem("algebraProgress", 3);
             location.reload();
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     ejercicio4Btn.addEventListener("click", function () {
-        if (algebraProgress >= 3) {
+        if (calculoProgress >= 3) {
             alert("Has completado el Ejercicio 4");
             localStorage.setItem("algebraProgress", 4);
             location.reload();
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     ejercicio5Btn.addEventListener("click", function () {
-        if (algebraProgress >= 4) {
+        if (calculoProgress >= 4) {
             alert("Has completado el Ejercicio 5");
             localStorage.setItem("algebraProgress", 5);
             location.reload();
