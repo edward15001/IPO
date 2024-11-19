@@ -122,11 +122,28 @@
         text-align: center;
       }
 
-      /*.switch {
+      .flag {
+        width: 30px; /* Ajusta el tamaño de las banderas */
+        height: auto;
+      }
+
+      .interruptor {
+        position: absolute;
+        top: 50%; /* Centrado verticalmente */
+        right: 35%; /* Posicionado al 35% desde la derecha */
+        /*transform: translateY(-50%); /* Compensa el centrado por top */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px; /* Espacio entre las banderas y el slider */
+        z-index: 10;
+      }
+
+      .switch {
         position: relative;
-        display: inline-block;
         width: 60px;
         height: 34px;
+        z-index: 5;
       }
 
       .switch input {
@@ -173,7 +190,7 @@
 
       .slider.round:before {
         border-radius: 50%;
-      }*/
+      }
     </style>
   </head>
   <body>
@@ -200,12 +217,22 @@
         ></path>
       </svg>
     </div>
-    <!--<div class="interruptor">
+    <div class="interruptor">
+      <img
+        src="/Img/bandera-britanica.png"
+        alt="Bandera Británica"
+        class="flag flag-left"
+      />
       <label class="switch">
         <input type="checkbox" />
         <div class="slider round"></div>
       </label>
-    </div>-->
+      <img
+        src="/Img/bandera-espanola.webp"
+        alt="Bandera Española"
+        class="flag flag-right"
+      />
+    </div>
     <div class="login-container">
       <h2 class="login-title">Iniciar Sesión</h2>
       <form id="loginForm" onsubmit="return validateForm(event)">
@@ -253,11 +280,17 @@
         successMessage.style.display = "none";
 
         // Verificar si la contraseña es "contraseña"
-        if (password === "contraseña") {
+        if (password === "alumno") {
           // Mostrar mensaje de éxito y redirigir después de 1 segundo
           successMessage.style.display = "block";
           setTimeout(() => {
             window.location.href = "index.html";
+          }, 1000);
+          return true;
+        } else if (password === "profesor") {
+          successMessage.style.display = "block";
+          setTimeout(() => {
+            window.location.href = "PanelProf.html";
           }, 1000);
           return true;
         } else {
