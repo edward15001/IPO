@@ -21,6 +21,7 @@ body {
     align-items: center;
     padding: 30px;
     text-align: center;
+    z-index: 1;
 }
 
 .login-title {
@@ -53,7 +54,7 @@ body {
 }
 
 .sidebar {
-    background-color: #4682b4;
+    background-color: #b446a4;
     color: white;
     border-radius: 10px;
     padding: 20px;
@@ -68,6 +69,7 @@ body {
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    z-index: 1;
 }
 
 .sidebar ul {
@@ -88,10 +90,6 @@ body {
     -moz-transition: color 0.3s ease;
     -ms-transition: color 0.3s ease;
     -o-transition: color 0.3s ease;
-}
-
-.sidebar a:hover {
-    color: #363636;
 }
 
 .sidebar h2 {
@@ -128,6 +126,7 @@ body {
     width: 100%;
     overflow: hidden;
     line-height: 0;
+    z-index: 1;
 }
 
 .waveA svg {
@@ -149,6 +148,8 @@ body {
     width: 100%;
     overflow: hidden;
     line-height: 0;
+    z-index: 1;
+
 }
 
 .waveC svg {
@@ -170,6 +171,8 @@ body {
     width: 100%;
     overflow: hidden;
     line-height: 0;
+    z-index: 1;
+
 }
 
 .waveE svg {
@@ -191,6 +194,8 @@ body {
     width: 100%;
     overflow: hidden;
     line-height: 0;
+    z-index: 1;
+
 }
 
 .waveG svg {
@@ -203,6 +208,29 @@ body {
 
 .waveG .shape-fill {
     fill: #FFA500;
+}
+
+.waveM {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 1;
+
+}
+
+.waveM svg {
+    position: relative;
+    display: block;
+    width: calc(111% + 1.3px);
+    height: 146px;
+    transform: rotateY(180deg);
+}
+
+.waveM .shape-fill {
+    fill: #b446a4;
 }
 
 section {
@@ -248,6 +276,15 @@ h1 {
     transition: background-color 0.3s ease;
 }
 
+.sidebottons {
+    background-color: #5d2454;
+}
+
+.sidebottons:hover {
+    background-color: #363636;
+    transition: background-color 0.5s ease;
+}
+
 .algebra {
     background-color: #ff6347;
     /* Rojo Tomate */
@@ -268,6 +305,10 @@ h1 {
     /* Naranja */
 }
 
+.menu {
+    background-color: #b446a4;
+}
+
 .volver {
     background-color: #9fcd32;
 }
@@ -286,7 +327,7 @@ h1 {
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     padding-top: 100px;
     left: 0;
     top: 0;
@@ -324,4 +365,5 @@ h1 {
 video {
     width: 100%;
     border-radius: 10px;
+    z-index: 2;
 }
