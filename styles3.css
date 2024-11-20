@@ -26,7 +26,49 @@ ul {
     padding-left: 20px;
 }
 
+.rojo {
+    border: rgba(255, 0, 0, 0.452) solid 5px;
+    border-radius: 15px;
+    background-color: #ff634763;
+    padding: 20px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
 
+.azul {
+    border: rgba(0, 0, 255, 0.452) solid 5px;
+    border-radius: 15px;
+    background-color: #4682b463;
+    padding: 20px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.verde {
+    border: rgba(0, 255, 0, 0.452) solid 5px;
+    border-radius: 15px;
+    background-color: #32cd3263;
+    padding: 20px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.amarillo {
+    border: rgba(255, 255, 0, 0.452) solid 5px;
+    border-radius: 15px;
+    background-color: #ffa50063;
+    padding: 20px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
 
 .btn {
     padding: 15px;

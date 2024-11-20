@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>alumnoEjemplo</title>
-  </head>
-  <body>
-    <p>Nombre: Eustaquio</p>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles2.css" />
+  <title>alumnoEjemplo</title>
+</head>
+
+<body>
+  <h1>Texto guardado:</h1>
+  <p id="displayText"></p>
+  <img src="" alt="">
+  <div class="buttons">
+
+    <a href="ProgreProf.html" class="btn volver">Volver</a>
+  </div>
+  <script>
+    // Recupera el texto del localStorage
+    const savedText = localStorage.getItem('savedText');
+    // Muestra el texto en el <p> si existe
+    document.getElementById('displayText').innerText = savedText || 'No hay texto guardado.';
+  </script>
+</body>
+
 </html>

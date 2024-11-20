@@ -74,34 +74,34 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     ejercicio1Btn.addEventListener("click", function () {
-        showVideo("videos/videoEjemplo.circ", "ejerciciosC/ejercicio1.html");
+        showVideo("videos/calculo.mp4", "ejerciciosC/ejercicio1.html");
         localStorage.setItem("calculoProgress", 1);
     });
 
     ejercicio2Btn.addEventListener("click", function () {
         if (calculoProgress >= 1) {
-            showVideo("videos/videoEjemplo.circ", "ejerciciosC/ejercicio2.html");
+            showVideo("videos/calculo.mp4", "ejerciciosC/ejercicio2.html");
             localStorage.setItem("calculoProgress", 2);
         }
     });
 
     ejercicio3Btn.addEventListener("click", function () {
         if (calculoProgress >= 2) {
-            showVideo("videos/videoEjemplo.circ", "ejerciciosC/ejercicio3.html");
+            showVideo("videos/calculo.mp4", "ejerciciosC/ejercicio3.html");
             localStorage.setItem("calculoProgress", 3);
         }
     });
 
     ejercicio4Btn.addEventListener("click", function () {
         if (calculoProgress >= 3) {
-            showVideo("videos/videoEjemplo.circ", "ejerciciosC/ejercicio4.html");
+            showVideo("videos/calculo.mp4", "ejerciciosC/ejercicio4.html");
             localStorage.setItem("calculoProgress", 4);
         }
     });
 
     ejercicio5Btn.addEventListener("click", function () {
         if (calculoProgress >= 4) {
-            showVideo("videos/videoEjemplo.circ", "ejerciciosC/ejercicio5.html");
+            showVideo("videos/calculo.mp4", "ejerciciosC/ejercicio5.html");
             localStorage.setItem("calculoProgress", 5);
         }
     });

@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles2.css" />
-    <title>Añadir Ejercicios</title>
-  </head>
-  <body>
-    <div class="response-container2">
-      <textarea
-        class="response-box"
-        placeholder="Escribe el nombre del alumno aquí..."
-      ></textarea>
-      <a href="alumnoEjemplo.html" class="send-button">Buscar</a>
-    </div>
-    <div class="buttons">
-      <a href="./PanelProf.html" class="btn volver">Volver</a>
-    </div>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles2.css" />
+  <title>Añadir Ejercicios</title>
+</head>
+
+<body>
+  <textarea id="inputText" class="response-container" placeholder="Escribe el nombre del alumno..."></textarea>
+  <br>
+  <div class="buttons">
+    <a id="goToPanel2" class="btn volver">Consultar alumno</a>
+    <a href="PanelProf.html" class="btn volver">Volver</a>
+  </div>
+  <script>
+    document.getElementById('goToPanel2').addEventListener('click', function () {
+      const text = document.getElementById('inputText').value;
+      // Almacena el texto en localStorage
+      localStorage.setItem('savedText', text);
+      // Redirige a la segunda página
+      window.location.href = 'alumnoEjemplo.html';
+    });
+  </script>
+</body>
+
 </html>
