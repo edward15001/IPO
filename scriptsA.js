@@ -79,41 +79,41 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Mostrar el video explicativo y configurar la redirección al ejercicio correspondiente
     ejercicio1Btn.addEventListener("click", function () {
-        showVideo("videos/videoEjemplo.circ", "ejerciciosA/ejercicio1.html");
+        showVideo("videos/algebra.mp4", "ejerciciosA/ejercicio1.html");
         localStorage.setItem("algebraProgress", 1);
     });
 
     ejercicio2Btn.addEventListener("click", function () {
         if (algebraProgress >= 1) {
-            showVideo("videos/videoEjemplo.circ", "ejerciciosA/ejercicio2.html");
+            showVideo("videos/algebra.mp4", "ejerciciosA/ejercicio2.html");
             localStorage.setItem("algebraProgress", 2);
         }
     });
 
     ejercicio3Btn.addEventListener("click", function () {
         if (algebraProgress >= 2) {
-            showVideo("videos/videoEjemplo.circ", "ejerciciosA/ejercicio3.html");
+            showVideo("videos/algebra.mp4", "ejerciciosA/ejercicio3.html");
             localStorage.setItem("algebraProgress", 3);
         }
     });
 
     ejercicio4Btn.addEventListener("click", function () {
         if (algebraProgress >= 3) {
-            showVideo("videos/videoEjemplo.circ", "ejerciciosA/ejercicio4.html");
+            showVideo("videos/algebra.mp4", "ejerciciosA/ejercicio4.html");
             localStorage.setItem("algebraProgress", 4);
         }
     });
 
     ejercicio5Btn.addEventListener("click", function () {
         if (algebraProgress >= 4) {
-            showVideo("videos/videoEjemplo.circ", "ejerciciosA/ejercicio5.html");
+            showVideo("videos/algebra.mp4", "ejerciciosA/ejercicio5.html");
             localStorage.setItem("algebraProgress", 5);
         }
     });
 
     ejercicio6Btn.addEventListener("click", function () {
         if (algebraProgress >= 5) {
-            showVideo("videos/videoEjemplo.circ", "ejerciciosA/ejercicio6.html");
+            showVideo("videos/algebra.mp4", "ejerciciosA/ejercicio6.html");
             localStorage.setItem("algebraProgress", 6);
         }
     });

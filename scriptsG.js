@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
         ejercicio1Btn.addEventListener("click", function () {
-        showVideo("videos/videoEjemplo.circ", "ejerciciosG/ejercicio1.html");
+        showVideo("videos/geometria.mp4", "ejerciciosG/ejercicio1.html");
         localStorage.setItem("geometriaProgess", 1);
     });
 });

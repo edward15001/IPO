@@ -1,17 +1,170 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="../styles.css" />
-  </head>
-  <body>
-    <div class="container">
-      <h1>Ejercicio6</h1>
-      <div class="buttons">
-        <a href="../estadistica.html" class="btn volver">Volver</a>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio de Estadística</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #options {
+      margin-right: 20px;
+      margin-top: 3rem;
+    }
+
+    .dropzone {
+      border: 2px dashed #ccc;
+      padding: 20px;
+      width: 200px;
+      height: 200px;
+      text-align: center;
+      margin: 10px;
+      display: flex;
+    }
+
+    .draggable {
+      padding: 10px;
+      margin: 5px;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      cursor: move;
+    }
+
+    .correct {
+      background-color: #c8e6c9;
+      /* verde claro */
+    }
+
+    .incorrect {
+      background-color: #ffcdd2;
+      /* rojo claro */
+    }
+
+    #result {
+      margin-top: 20px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+
+    }
+
+    .dropzone-container {
+      display: grid;
+      grid-template-columns: 2fr 2fr;
+    }
+
+    h3 {
+      align-items: center;
+      justify-content: center;
+      display: flex;
+    }
+
+    .volver {
+      background-color: #9fcd32;
+      border: black solid 1px;
+    }
+
+    .buttons {
+      display: inline-flex;
+      gap: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 25px;
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+      border-radius: 10px;
+      transition: background-color 0.3s ease;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Ejercicio de Estadística</h2>
+  <p>Indica cuáles variables son cualitativas y cuáles cuantitativas arrastrando las opciones a las cajas
+    correspondientes.</p>
+
+  <div class="container">
+    <div id="options">
+      <div class="draggable" draggable="true" ondragstart="drag(event)">Edad</div>
+      <div class="draggable" draggable="true" ondragstart="drag(event)">Color de ojos</div>
+      <div class="draggable" draggable="true" ondragstart="drag(event)">Peso</div>
+      <div class="draggable" draggable="true" ondragstart="drag(event)">Género</div>
+      <div class="draggable" draggable="true" ondragstart="drag(event)">Altura</div>
+      <div class="draggable" draggable="true" ondragstart="drag(event)">Estado civil</div>
+    </div>
+
+    <div class="dropzone-container">
+      <h3>Variables Cualitativas</h3>
+      <h3>Variables Cuantitativas</h3>
+      <div class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">
+      </div>
+
+      <div class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">
       </div>
     </div>
-  </body>
+  </div>
+
+  <div class="buttons">
+    <button class="btn volver" onclick="checkAnswers()">Corregir</button>
+    <a href="../estadistica.html" class="btn volver">Volver</a>
+  </div>
+
+  <p id="result"></p>
+  <script>
+    const correctQualitative = ["Color de ojos", "Género", "Estado civil"];
+    const correctQuantitative = ["Edad", "Peso", "Altura"];
+
+    function allowDrop(event) {
+      event.preventDefault();
+    }
+
+    function drag(event) {
+      event.dataTransfer.setData("text", event.target.innerHTML);
+    }
+
+    function drop(event) {
+      event.preventDefault();
+      let data = event.dataTransfer.getData("text");
+      event.target.innerHTML += data + "<br>"; // Añade la variable arrastrada
+    }
+
+    function checkAnswers() {
+      const qualitativeZone = document.getElementById("qualitative").innerHTML.trim().split("<br>").filter(Boolean);
+      const quantitativeZone = document.getElementById("quantitative").innerHTML.trim().split("<br>").filter(Boolean);
+      const result = document.getElementById("result");
+
+      const qualitativeCorrect = correctQualitative.every(item => qualitativeZone.includes(item));
+      const quantitativeCorrect = correctQuantitative.every(item => quantitativeZone.includes(item));
+
+      // Comprobar si hay respuestas incorrectas en las zonas
+      const qualitativeIncorrect = qualitativeZone.some(item => !correctQualitative.includes(item));
+      const quantitativeIncorrect = quantitativeZone.some(item => !correctQuantitative.includes(item));
+
+      if (qualitativeCorrect && !qualitativeIncorrect && quantitativeCorrect && !quantitativeIncorrect) {
+        result.innerHTML = " ¡Todas las respuestas son correctas!";
+      } else {
+        result.innerHTML = "Algunas respuestas son incorrectas. Inténtalo de nuevo.";
+      }
+    }
+  </script>
+
+</body>
+
 </html>

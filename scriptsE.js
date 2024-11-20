@@ -82,41 +82,41 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     ejercicio1Btn.addEventListener("click", function () {
-        showVideo("videos/videoEjemplo.circ", "ejerciciosE/ejercicio1.html");
+        showVideo("videos/estadistica.mp4", "ejerciciosE/ejercicio1.html");
         localStorage.setItem("estadisticaProgress", 1);
     });
 
     ejercicio2Btn.addEventListener("click", function () {
         if (estadisticaProgress >= 1) {
-            showVideo("videos/videoEjemplo.circ", "ejerciciosE/ejercicio2.html");
+            showVideo("videos/estadistica.mp4", "ejerciciosE/ejercicio2.html");
             localStorage.setItem("estadisticaProgress", 2);
         }
     });
 
     ejercicio3Btn.addEventListener("click", function () {
         if (estadisticaProgress >= 2) {
-            showVideo("videos/videoEjemplo.circ", "ejerciciosE/ejercicio3.html");
+            showVideo("videos/estadistica.mp4", "ejerciciosE/ejercicio3.html");
             localStorage.setItem("estadisticaProgress", 3);
         }
     });
 
     ejercicio4Btn.addEventListener("click", function () {
         if (estadisticaProgress >= 3) {
-            showVideo("videos/videoEjemplo.circ", "ejerciciosE/ejercicio4.html");
+            showVideo("videos/estadistica.mp4", "ejerciciosE/ejercicio4.html");
             localStorage.setItem("estadisticaProgress", 4);
         }
     });
 
     ejercicio5Btn.addEventListener("click", function () {
         if (estadisticaProgress >= 4) {
-            showVideo("videos/videoEjemplo.circ", "ejerciciosE/ejercicio5.html");
+            showVideo("videos/estadistica.mp4", "ejerciciosE/ejercicio5.html");
             localStorage.setItem("estadisticaProgress", 5);
         }
     });
 
     ejercicio6Btn.addEventListener("click", function () {
         if (estadisticaProgress >= 5) {
-            showVideo("videos/videoEjemplo.circ", "ejerciciosE/ejercicio6.html");
+            showVideo("videos/estadistica.mp4", "ejerciciosE/ejercicio6.html");
             localStorage.setItem("estadisticaProgress", 6);
         }
     });

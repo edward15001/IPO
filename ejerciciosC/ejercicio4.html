@@ -1,17 +1,148 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="../styles.css" />
-  </head>
-  <body>
-    <div class="container">
-      <h1>Ejercicio4</h1>
-      <div class="buttons">
-        <a href="../calculo.html" class="btn volver">Volver</a>
-      </div>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio de Cálculo 4</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      margin: 20px;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      /* Centrar el texto */
+    }
+
+    .opciones {
+      display: flex;
+      justify-content: center;
+      /* Centrar opciones */
+      flex-wrap: wrap;
+      /* Permitir que las opciones se envuelvan */
+      margin: 20px 0;
+      /* Espacio superior e inferior */
+    }
+
+    .opcion {
+      border: 2px solid #4CAF50;
+      /* Borde verde */
+      border-radius: 5px;
+      /* Bordes redondeados */
+      padding: 10px;
+      /* Espaciado interno */
+      margin: 10px;
+      /* Espacio entre opciones */
+      cursor: pointer;
+      /* Cambiar el cursor al pasar por encima */
+      transition: background-color 0.3s;
+      /* Transición suave para el color de fondo */
+      display: flex;
+      /* Flex para alinear el contenido */
+      align-items: center;
+      /* Centrar verticalmente */
+    }
+
+    .opcion:hover {
+      background-color: #f0f0f0;
+      /* Color de fondo al pasar el ratón */
+    }
+
+    .resultado {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .volver {
+      background-color: #9fcd32;
+    }
+
+    .buttons {
+      display: grid;
+      gap: 20px;
+    }
+
+    .btn {
+      display: block;
+      padding: 25px;
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      transition: background-color 0.3s ease;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Ejercicio de Cálculo 4</h1>
+  <p>¿Cuánto es 5 + 3?</p>
+
+  <form id="quizForm">
+    <div class="opciones">
+      <label class="opcion">
+        <input type="radio" id="opcion1" name="respuesta" value="6" style="display: none;"
+          onchange="verificarRespuesta()">
+        6
+      </label>
+      <label class="opcion">
+        <input type="radio" id="opcion2" name="respuesta" value="7" style="display: none;"
+          onchange="verificarRespuesta()">
+        7
+      </label>
+      <label class="opcion">
+        <input type="radio" id="opcion3" name="respuesta" value="8" style="display: none;"
+          onchange="verificarRespuesta()">
+        8
+      </label>
+      <label class="opcion">
+        <input type="radio" id="opcion4" name="respuesta" value="9" style="display: none;"
+          onchange="verificarRespuesta()">
+        9
+      </label>
     </div>
-  </body>
+  </form>
+
+  <div class="resultado" id="resultado"></div>
+
+  <script>
+    function verificarRespuesta() {
+      const opciones = document.getElementsByName('respuesta');
+      let respuestaSeleccionada;
+      for (const opcion of opciones) {
+        if (opcion.checked) {
+          respuestaSeleccionada = opcion.value;
+          break;
+        }
+      }
+
+      const resultadoDiv = document.getElementById('resultado');
+      if (respuestaSeleccionada) {
+        if (respuestaSeleccionada === "8") {
+          resultadoDiv.textContent = "¡Correcto! 5 + 3 es 8.";
+          resultadoDiv.style.color = "green"; // Cambiar color a verde si es correcto
+        } else {
+          resultadoDiv.textContent = "Incorrecto. Intenta de nuevo.";
+          resultadoDiv.style.color = "red"; // Cambiar color a rojo si es incorrecto
+        }
+      }
+    }
+  </script>
+  <div class="container">
+    <div class="buttons">
+      <a href="../calculo.html" class="btn volver">Volver</a>
+    </div>
+  </div>
+
+</body>
+
 </html>
