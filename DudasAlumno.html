@@ -27,9 +27,17 @@
     <textarea id="inputText" class="response-container" placeholder="Escribe aqui tu duda..."></textarea>
     <br>
     <div class="buttons">
-        <a id="goToPanel2" class="btn volver">Enviar duda</a>
+        <a href="#" id="goToPanel2" class="btn volver">Enviar duda</a>
         <a href="menuAlumno.html" class="btn volver">Volver</a>
     </div>
+
+    <script>
+        // Añade un evento de clic al botón "Enviar duda"
+        document.getElementById('goToPanel2').addEventListener('click', function (event) {
+            event.preventDefault(); // Previene la navegación
+            alert('Mensaje enviado');
+        });
+    </script>
 
 </body>
 

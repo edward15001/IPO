@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <h1>Texto guardado:</h1>
+  <h1>Alumno:</h1>
   <p id="displayText"></p>
   <img src="./Img/graficaAlumno.jpg" alt="">
   <div class="buttons">
@@ -20,7 +20,7 @@
     // Recupera el texto del localStorage
     const savedText = localStorage.getItem('savedText');
     // Muestra el texto en el <p> si existe
-    document.getElementById('displayText').innerText = savedText || 'No hay texto guardado.';
+    document.getElementById('displayText').innerText = savedText || 'No ha seleccinado ningún alumno.';
   </script>
 </body>
 

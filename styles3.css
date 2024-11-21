@@ -14,7 +14,7 @@ h1 {
 }
 
 h2 {
-    color: #2980b9;
+    color: #000000;
 }
 
 p {
@@ -26,6 +26,101 @@ ul {
     padding-left: 20px;
 }
 
+.waveA {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 1;
+}
+
+.waveA svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 117px;
+    transform: rotateY(180deg);
+}
+
+.waveA .shape-fill {
+    fill: #FF6347;
+}
+
+.waveC {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 1;
+
+}
+
+.waveC svg {
+    position: relative;
+    display: block;
+    width: calc(111% + 1.3px);
+    height: 146px;
+    transform: rotateY(180deg);
+}
+
+.waveC .shape-fill {
+    fill: #4682B4;
+}
+
+.waveE {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 1;
+
+}
+
+.waveE svg {
+    position: relative;
+    display: block;
+    width: calc(111% + 1.3px);
+    height: 146px;
+    transform: rotateY(180deg);
+}
+
+.waveE .shape-fill {
+    fill: #32CD32;
+}
+
+.waveG {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 1;
+
+}
+
+.waveG svg {
+    position: relative;
+    display: block;
+    width: calc(111% + 1.3px);
+    height: 146px;
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+}
+
+.waveG .shape-fill {
+    fill: #FFA500;
+}
+
 .rojo {
     border: rgba(255, 0, 0, 0.452) solid 5px;
     border-radius: 15px;
@@ -35,6 +130,8 @@ ul {
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
+    z-index: 1;
+    margin-bottom: 20px;
 }
 
 .azul {
@@ -46,6 +143,8 @@ ul {
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
+    z-index: 1;
+    margin-bottom: 20px;
 }
 
 .verde {
@@ -57,6 +156,8 @@ ul {
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
+    z-index: 1;
+    margin-bottom: 20px;
 }
 
 .amarillo {
@@ -68,6 +169,8 @@ ul {
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
+    z-index: 1;
+    margin-bottom: 20px;
 }
 
 .btn {
